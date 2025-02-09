@@ -8,10 +8,8 @@ import 'package:news_app/features/daily_news/presentation/bloc/articles/local/bl
 import 'package:news_app/features/daily_news/presentation/pages/article_detail/article_detail.dart';
 import 'package:news_app/injection_container.dart';
 
-// ignore: must_be_immutable
 class SavedArticles extends StatelessWidget {
-  List<ArticleEntity>? articles;
-  SavedArticles({super.key});
+  const SavedArticles({super.key});
 
   @override
   Widget build(BuildContext context) {
