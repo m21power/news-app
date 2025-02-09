@@ -38,7 +38,7 @@ class SavedArticles extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                ArticleDetail(article: article!)),
+                                ArticleDetail(article: article)),
                       );
                     },
                     child: savedCard(article),
