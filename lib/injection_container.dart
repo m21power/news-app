@@ -8,6 +8,7 @@ import 'package:news_app/features/daily_news/domain/usecases/get_article_usecase
 import 'package:news_app/features/daily_news/domain/usecases/get_saved_articles.dart';
 import 'package:news_app/features/daily_news/domain/usecases/remote_article_usecase.dart';
 import 'package:news_app/features/daily_news/domain/usecases/save_article_usecase.dart';
+import 'package:news_app/features/daily_news/presentation/bloc/articles/local/bloc/local_article_bloc.dart';
 import 'package:news_app/features/daily_news/presentation/bloc/articles/remote/bloc/remote_article_bloc.dart';
 
 final sl = GetIt.instance;
@@ -47,5 +48,11 @@ Future<void> initialDependencies() async {
   //bloc shouldn't instantiated using singleton cuz singleton gives us one instance perlife time of the app
   sl.registerFactory<RemoteArticleBloc>(
     () => RemoteArticleBloc(sl()),
+  );
+
+  //bloc for local database
+
+  sl.registerFactory<LocalArticleBloc>(
+    () => LocalArticleBloc(sl(), sl(), sl()),
   );
 }
