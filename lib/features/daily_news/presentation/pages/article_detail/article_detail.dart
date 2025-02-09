@@ -16,7 +16,10 @@ class ArticleDetail extends StatelessWidget {
       create: (context) => sl<LocalArticleBloc>(),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Article Detail'),
+          title: const Text(
+            'Article Detail',
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         body: SingleChildScrollView(
           child: Padding(

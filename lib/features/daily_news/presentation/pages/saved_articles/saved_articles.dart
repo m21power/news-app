@@ -14,10 +14,13 @@ class SavedArticles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<LocalArticleBloc>(
-      create: (context) => sl()..add(GetSavedArticles()),
+      create: (context) => sl<LocalArticleBloc>()..add(GetSavedArticles()),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Saved Articles"),
+          title: Text(
+            "Saved Articles",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         body: BlocBuilder<LocalArticleBloc, LocalArticleState>(
           builder: (context, state) {
@@ -41,7 +44,7 @@ class SavedArticles extends StatelessWidget {
                                 ArticleDetail(article: article)),
                       );
                     },
-                    child: savedCard(article),
+                    child: savedCard(context, article),
                   );
                 },
               );
@@ -56,12 +59,25 @@ class SavedArticles extends StatelessWidget {
     );
   }
 
-  Card savedCard(ArticleEntity article) {
+  Card savedCard(BuildContext context, ArticleEntity article) {
     return Card(
       color: Colors.white,
       elevation: 0.1,
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: ListTile(
+        trailing: GestureDetector(
+          onTap: () {
+            BlocProvider.of<LocalArticleBloc>(context)
+                .add(RemoveArticle(article));
+          },
+          child: CircleAvatar(
+            backgroundColor: Colors.black.withOpacity(0.08),
+            child: Icon(
+              Icons.remove,
+              color: Colors.red,
+            ),
+          ),
+        ),
         contentPadding: const EdgeInsets.all(12),
         leading: article.urlToImage != null && article.urlToImage!.isNotEmpty
             ? ClipRRect(

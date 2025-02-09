@@ -41,7 +41,7 @@ class DailyNews extends StatelessWidget {
             child: Icon(
               Icons.bookmark,
               color: Colors.black,
-              size: 40,
+              size: 25,
             ),
           ),
         )
