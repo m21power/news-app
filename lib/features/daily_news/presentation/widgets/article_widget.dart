@@ -16,7 +16,7 @@ class ArticleWidget extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => ArticleDetail(article: article)),
+              builder: (context) => ArticleDetail(article: article!)),
         );
       },
       child: Container(
