@@ -1,16 +1,50 @@
-# news_app
+# News App
 
-A new Flutter project.
+A Flutter application that fetches news from the free API [NewsAPI.org](https://newsapi.org) and allows users to save articles in a local database. This project is an excellent starting point for learning **Clean Architecture** and **BLoC State Management**.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Fetch latest news from [NewsAPI.org](https://newsapi.org)
+- Save articles locally for offline access
+- Well-structured Clean Architecture
+- State management using **BLoC**
+- Dependency injection using `get_it`
+- Dark mode support (if applicable, consider adding this feature)
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** - UI development
+- **Dart** - Programming language
+- **BLoC** - State management
+- **floor** - Local storage (mention which one you're using)
+- **Dio** - API calls
+- **get_it** - Dependency injection
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup & Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/m21power/news-app.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd news-app
+   ```
+3. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+4. Run the app:
+   ```sh
+   flutter run
+   ```
+   *(Make sure to add your NewsAPI key in the appropriate file)*
+
+## Contributions
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
