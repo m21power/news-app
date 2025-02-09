@@ -25,9 +25,7 @@ class ArticleWidget extends StatelessWidget {
     String imageUrl = article?.urlToImage ?? "";
 
     return CachedNetworkImage(
-      imageUrl: imageUrl.isNotEmpty
-          ? imageUrl
-          : "https://via.placeholder.com/150", // Default image
+      imageUrl: imageUrl,
       imageBuilder: (context, imageProvider) => Padding(
         padding: const EdgeInsetsDirectional.only(end: 14),
         child: ClipRRect(
