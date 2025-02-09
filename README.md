@@ -9,7 +9,6 @@ A Flutter application that fetches news from the free API [NewsAPI.org](https://
 - Well-structured Clean Architecture
 - State management using **BLoC**
 - Dependency injection using `get_it`
-- Dark mode support (if applicable, consider adding this feature)
 
 ## Tech Stack
 
@@ -39,6 +38,16 @@ A Flutter application that fetches news from the free API [NewsAPI.org](https://
    flutter run
    ```
    *(Make sure to add your NewsAPI key in the appropriate file)*
+
+UI
+![image](https://github.com/user-attachments/assets/ac83a3d0-de51-4663-8440-487387692875)
+![image](https://github.com/user-attachments/assets/4de7b549-6be4-43fa-a3af-c3eed4b5cc9e)
+![image](https://github.com/user-attachments/assets/c9559d45-2038-472e-be65-9636b7cd425d)
+
+
+
+
+
 
 ## Contributions
 
