@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:news_app/features/daily_news/presentation/bloc/articles/remote/bloc/remote_article_bloc.dart';
+import 'package:news_app/features/daily_news/presentation/pages/article_detail/article_detail.dart';
 import 'package:news_app/features/daily_news/presentation/widgets/article_widget.dart';
 
 import '../../bloc/articles/remote/bloc/remote_article_state.dart';
@@ -39,9 +40,10 @@ class DailyNews extends StatelessWidget {
 
         if (state is RemoteArticlesDone) {
           return ListView.builder(
-              itemCount: state.articles!.length,
-              itemBuilder: (context, index) =>
-                  ArticleWidget(article: state.articles![index]));
+            itemCount: state.articles!.length,
+            itemBuilder: (context, index) =>
+                ArticleWidget(article: state.articles![index]),
+          );
         } else {
           return const Center(
             child: Icon(Icons.refresh),

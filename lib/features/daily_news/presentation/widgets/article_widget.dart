@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/features/daily_news/domain/entity/article.dart';
+import 'package:news_app/features/daily_news/presentation/pages/article_detail/article_detail.dart';
 
 class ArticleWidget extends StatelessWidget {
   final ArticleEntity? article;
@@ -10,12 +11,21 @@ class ArticleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.width / 2.2,
-      padding: const EdgeInsetsDirectional.only(
-          start: 14, end: 14, top: 10, bottom: 5),
-      child: Row(
-        children: [buildImage(context), buildTitleAndDescription()],
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ArticleDetail(article: article)),
+        );
+      },
+      child: Container(
+        height: MediaQuery.of(context).size.width / 2.2,
+        padding: const EdgeInsetsDirectional.only(
+            start: 14, end: 14, top: 10, bottom: 5),
+        child: Row(
+          children: [buildImage(context), buildTitleAndDescription()],
+        ),
       ),
     );
   }
