@@ -15,7 +15,7 @@ A Flutter application that fetches news from the free API [NewsAPI.org](https://
 - **Flutter** - UI development
 - **Dart** - Programming language
 - **BLoC** - State management
-- **floor** - Local storage (mention which one you're using)
+- **floor** - Local storage 
 - **Dio** - API calls
 - **get_it** - Dependency injection
 
